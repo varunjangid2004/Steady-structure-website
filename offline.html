@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Internet | Steady Structure Forming</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    :root {
+      --green-light: #6FCF97;
+      --green-mid:   #2FA084;
+      --green-dark:  #1F6F5F;
+      --black:       #0D1F1B;
+      --gray:        #6B7B78;
+      --border:      rgba(31,111,95,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #fff;
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 5%;
+      text-align: center;
+    }
+
+    .icon-wrap {
+      width: 100px;
+      height: 100px;
+      background: rgba(47,160,132,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 44px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.06); opacity: 0.8; }
+    }
+
+    h1 {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--gray);
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 380px;
+      margin: 0 auto 32px;
+    }
+
+    .retry-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-mid);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 13px 28px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all .25s;
+      margin-bottom: 40px;
+    }
+    .retry-btn:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+    .divider {
+      width: 48px; height: 1px;
+      background: var(--border);
+      margin: 0 auto 28px;
+    }
+
+    .contact-info {
+      background: #F7FAFA;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 28px;
+      max-width: 380px;
+      width: 100%;
+    }
+    .contact-info p {
+      font-size: 13px;
+      color: var(--gray);
+      margin-bottom: 14px;
+      font-weight: 400;
+    }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--black);
+      font-size: 14px;
+      font-weight: 500;
+      transition: all .2s;
+    }
+    .contact-link:hover { border-color: var(--green-mid); color: var(--green-mid); }
+
+    .status {
+      margin-top: 28px;
+      font-size: 12px;
+      color: #B0C0BD;
+    }
+    .status span {
+      display: inline-block;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #E24B4A;
+      margin-right: 5px;
+      vertical-align: middle;
+      animation: blink 1.5s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="icon-wrap">📡</div>
+
+  <h1>You're Offline</h1>
+  <p>It looks like you've lost your internet connection. Please check your network and try again.</p>
+
+  <button class="retry-btn" onclick="retryConnection()">
+    🔄 Try Again
+  </button>
+
+  <div class="divider"></div>
+
+  <div class="contact-info">
+    <p>While you're offline — reach Steady Structure Forming directly:</p>
+    <div class="contact-links">
+      <a href="tel:+919214364999" class="contact-link">
+        📞 Call — +91 92143 64999
+      </a>
+      <a href="https://wa.me/919214364999?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20solar%20mounting%20structures." class="contact-link">
+        💬 WhatsApp — +91 92143 64999
+      </a>
+      <a href="mailto:steadystructureforming@gmail.com" class="contact-link">
+        ✉️ steadystructureforming@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <p class="status"><span></span>No internet connection detected</p>
+
+  <script>
+    function retryConnection() {
+      window.location.reload();
+    }
+
+    // Auto retry every 5 seconds and redirect if back online
+    setInterval(() => {
+      if (navigator.onLine) {
+        window.location.href = 'index.html';
+      }
+    }, 5000);
+
+    // Listen for online event
+    window.addEventListener('online', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+
+</body>
+</html>

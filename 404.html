@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Steady Structure Forming</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-light: #6FCF97;
+      --green-mid:   #2FA084;
+      --green-dark:  #1F6F5F;
+      --black:       #0D1F1B;
+      --gray:        #6B7B78;
+      --border:      rgba(31,111,95,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #fff;
+      color: var(--black);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 5%;
+      text-align: center;
+    }
+
+    .logo-wrap {
+      margin-bottom: 48px;
+    }
+    .logo-wrap img {
+      height: 52px;
+      width: auto;
+    }
+
+    .error-visual {
+      width: 120px;
+      height: 120px;
+      background: rgba(47,160,132,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 28px;
+      font-size: 52px;
+    }
+
+    .error-code {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(64px, 12vw, 120px);
+      font-weight: 800;
+      color: var(--green-light);
+      line-height: 1;
+      margin-bottom: 12px;
+      opacity: 0.3;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--gray);
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 420px;
+      margin: 0 auto 36px;
+    }
+
+    .btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 52px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-mid);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 13px 26px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all .25s;
+    }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--green-mid);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 13px 26px;
+      border-radius: 12px;
+      text-decoration: none;
+      border: 1.5px solid var(--green-mid);
+      transition: all .25s;
+    }
+    .btn-outline:hover { background: var(--green-mid); color: #fff; }
+
+    .quick-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+    .quick-link {
+      font-size: 13px;
+      color: var(--gray);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: all .2s;
+    }
+    .quick-link:hover { border-color: var(--green-mid); color: var(--green-mid); }
+
+    .contact-strip {
+      margin-top: 40px;
+      background: var(--green-dark);
+      border-radius: 16px;
+      padding: 18px 28px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 520px;
+    }
+    .contact-strip p { color: rgba(255,255,255,0.7); font-size: 13px; margin: 0; }
+    .contact-strip a {
+      color: var(--green-light);
+      font-weight: 500;
+      text-decoration: none;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .contact-strip a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+
+  <div class="logo-wrap">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Steady Structure Forming">
+    </a>
+  </div>
+
+  <div class="error-visual">🔍</div>
+  <div class="error-code">404</div>
+
+  <h1>Page Not Found</h1>
+  <p>The page you're looking for doesn't exist or may have been moved. Let's get you back on track.</p>
+
+  <div class="btns">
+    <a href="index.html" class="btn-primary">← Back to Homepage</a>
+    <a href="contact.html" class="btn-outline">Contact Us</a>
+  </div>
+
+  <div class="quick-links">
+    <a href="index.html" class="quick-link">Home</a>
+    <a href="about.html" class="quick-link">About</a>
+    <a href="products.html" class="quick-link">Products</a>
+    <a href="gallery.html" class="quick-link">Gallery</a>
+    <a href="contact.html" class="quick-link">Contact</a>
+  </div>
+
+  <div class="contact-strip">
+    <p>Need help? Reach us directly —</p>
+    <a href="tel:+919214364999">📞 +91 92143 64999</a>
+    <a href="https://wa.me/919214364999" target="_blank">💬 WhatsApp</a>
+  </div>
+
+</body>
+</html>
