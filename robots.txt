@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.steadystructure.com/sitemap.xml
+Sitemap: https://www.steadystructureforming.com/sitemap.xml
